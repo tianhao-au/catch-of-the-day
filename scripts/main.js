@@ -1,6 +1,8 @@
 var React = require('react');
 var ReactDOM = require('react-dom');
 
+var h = require('./helpers');
+
 var ReactRouter = require('react-router');
 var Router = ReactRouter.Router;
 var Route = ReactRouter.Route;
@@ -60,7 +62,7 @@ var StorePicker = React.createClass({
       <form className="store-selector">
         {/* Comment goes here! */}
         <h2>Please Enter A Store {name}</h2>
-        <input type="text" ref="storeId" required />
+        <input type="text" ref="storeId" defaultValue={h.getFunName()} required />
         <input type="submit" />
       </form>
     )
